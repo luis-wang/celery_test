@@ -1,0 +1,13 @@
+
+celery -A tasks worker --loglevel=info
+
+celery worker --help
+app.config_from_object('celeryconfig')
+
+
+celery -A tasks control rate_limit tasks.add 10/m
+
+
+
+
+

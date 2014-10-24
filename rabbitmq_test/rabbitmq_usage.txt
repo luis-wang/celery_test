@@ -1,0 +1,12 @@
+start:
+sudo invoke-rc.d rabbitmq-server start
+
+
+see status :
+sudo rabbitmqctl status
+ps -ef | grep rabbit
+
+
+start/stop
+sudo rabbitmqctl start/stop
+
