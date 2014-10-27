@@ -1,3 +1,5 @@
+http://www.rabbitmq.com/install-debian.html
+
 start:
 sudo invoke-rc.d rabbitmq-server start
 
