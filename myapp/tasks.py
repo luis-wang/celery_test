@@ -32,8 +32,8 @@ def add(x, y):
 
 #celery -A tasks worker --loglevel=info
 
-def run_task1():
-    result = add.delay(10, 99)
+def run_task1(a=10, b=20):
+    result = add.delay(a,b)
     print result.state
     print 'result = ', result
     print result.ready()
@@ -44,7 +44,7 @@ def run_task1():
 
 if __name__ == '__main__':
     print 'start..'
-    run_task1()
+    run_task1(55, 6)
 
     '''
     result.get(propagate=False)
